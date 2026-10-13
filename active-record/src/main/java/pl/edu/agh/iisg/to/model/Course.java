@@ -98,6 +98,8 @@ public class Course {
                         rs.getInt("index_number")
                 ));
             }
+            this.enrolledStudents = resultList;
+            this.isStudentsListDownloaded = true;
             return  resultList;
         } catch (SQLException e){
             e.printStackTrace();
@@ -108,7 +110,8 @@ public class Course {
     public List<Student> cachedStudentsList() {
         //TODO implement - done
         if(!isStudentsListDownloaded){
-            studentList();
+            this.enrolledStudents = studentList();
+            this.isStudentsListDownloaded = true;
         }
         return enrolledStudents;
     }

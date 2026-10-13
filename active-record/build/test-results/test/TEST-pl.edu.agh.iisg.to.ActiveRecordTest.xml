@@ -1,83 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.edu.agh.iisg.to.ActiveRecordTest" tests="10" skipped="0" failures="2" errors="0" timestamp="2026-10-08T11:00:23.804Z" hostname="MacBook-Air-Kasia-2.local" time="0.109">
+<testsuite name="pl.edu.agh.iisg.to.ActiveRecordTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-13T18:50:48.912Z" hostname="MacBook-Air-Kasia-2.local" time="0.117">
   <properties/>
-  <testcase name="studentCanBeGraded()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.023"/>
-  <testcase name="courseStudentListIsCached()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.014">
-    <failure message="java.lang.NullPointerException: Cannot invoke &quot;java.util.List.size()&quot; because &quot;students&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;java.util.List.size()&quot; because &quot;students&quot; is null
-	at pl.edu.agh.iisg.to.ActiveRecordTest.courseStudentListIsCached(ActiveRecordTest.java:176)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-</failure>
-  </testcase>
-  <testcase name="courseConsistsOfEnrolledStudents()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.013"/>
-  <testcase name="studentCanBeFoundById()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.006"/>
-  <testcase name="studentCanBeEnrolledInCourseOnce()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.011"/>
-  <testcase name="studentReportCanBeObtained()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.008">
-    <failure message="java.lang.NullPointerException: Cannot invoke &quot;java.lang.Float.floatValue()&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;java.lang.Float.floatValue()&quot; because the return value of &quot;java.util.Map.get(Object)&quot; is null
-	at pl.edu.agh.iisg.to.ActiveRecordTest.studentReportCanBeObtained(ActiveRecordTest.java:219)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-</failure>
-  </testcase>
-  <testcase name="courseWithUniqueNameCanBeCreated()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.01"/>
-  <testcase name="studentWithUniqueIndexNumberCanBeCreated()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.009"/>
-  <testcase name="studentCanBeFoundByIndexNumber()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.006"/>
-  <testcase name="courseCanBeFoundById()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.004"/>
+  <testcase name="studentCanBeGraded()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.024"/>
+  <testcase name="courseStudentListIsCached()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.012"/>
+  <testcase name="courseConsistsOfEnrolledStudents()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.009"/>
+  <testcase name="studentCanBeFoundById()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.007"/>
+  <testcase name="studentCanBeEnrolledInCourseOnce()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.012"/>
+  <testcase name="studentReportCanBeObtained()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.015"/>
+  <testcase name="courseWithUniqueNameCanBeCreated()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.009"/>
+  <testcase name="studentWithUniqueIndexNumberCanBeCreated()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.014"/>
+  <testcase name="studentCanBeFoundByIndexNumber()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.007"/>
+  <testcase name="courseCanBeFoundById()" classname="pl.edu.agh.iisg.to.ActiveRecordTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.connection.ConnectionProvider init
+  <system-err><![CDATA[Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.connection.ConnectionProvider init
 INFO: Loading driver
 SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.connection.ConnectionProvider init
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.connection.ConnectionProvider init
 INFO: Connection created
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.connection.ConnectionProvider close
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.connection.ConnectionProvider close
 INFO: Closing connection
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.connection.ConnectionProvider init
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.connection.ConnectionProvider init
 INFO: Loading driver
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.connection.ConnectionProvider init
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.connection.ConnectionProvider init
 INFO: Connection created
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor <clinit>
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor <clinit>
 INFO: Creating table Student
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor <clinit>
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor <clinit>
 INFO: Creating table Course
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor <clinit>
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor <clinit>
 INFO: Creating table Student_Course
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor <clinit>
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor <clinit>
 INFO: Creating table Grade
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM course WHERE id = ? executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM course WHERE id = ? executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT S.* FROM student s JOIN student_course sc ON s.id = sc.student_id WHERE sc.course_id = ? executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
-INFO: Query: SELECT S.* FROM student s JOIN student_course sc ON s.id = sc.student_id WHERE sc.course_id = ? executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM course WHERE id = ? executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT S.* FROM student s JOIN student_course sc ON s.id = sc.student_id WHERE sc.course_id = ? executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM course WHERE id = ? executed.
 org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: student_course.student_id, student_course.course_id)
 	at org.sqlite.core.DB.newSQLException(DB.java:1179)
@@ -176,15 +160,17 @@ org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint faile
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM course WHERE id = ? executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM course WHERE id = ? executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+INFO: Query: SELECT c.id, c.name, AVG(g.grade) AS avg_grade FROM course c JOIN grade g ON c.id = g.course_id WHERE g.student_id = ? GROUP BY c.id, c.name executed.
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM course WHERE id = ? executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:48 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM course WHERE id = ? executed.
 org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: course.name)
 	at org.sqlite.core.DB.newSQLException(DB.java:1179)
@@ -283,9 +269,9 @@ org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint faile
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:49 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:49 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
 org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: student.index_number)
 	at org.sqlite.core.DB.newSQLException(DB.java:1179)
@@ -384,15 +370,15 @@ org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint faile
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:49 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE id = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:49 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM student WHERE index_number = (?) executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:49 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM course WHERE id = ? executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
+Oct 13, 2026 8:50:49 PM pl.edu.agh.iisg.to.executor.QueryExecutor read
 INFO: Query: SELECT * FROM course WHERE id = ? executed.
-Oct 08, 2026 1:00:23 PM pl.edu.agh.iisg.to.connection.ConnectionProvider close
+Oct 13, 2026 8:50:49 PM pl.edu.agh.iisg.to.connection.ConnectionProvider close
 INFO: Closing connection
 ]]></system-err>
 </testsuite>
