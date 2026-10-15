@@ -1,0 +1,21 @@
+# --- Pliki kompilacji ---
+*.class
+*.jar
+*.war
+*.ear
+
+# --- Gradle ---
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# --- IntelliJ IDEA ---
+.idea/
+*.iml
+out/
+
+# --- macOS ---
+.DS_Store
+
+# --- Bazy SQLite (generowane w runtime) ---
+*.db
