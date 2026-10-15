@@ -1,5 +1,6 @@
 package pl.edu.agh.iisg.to.dao;
 
+import org.hibernate.Session;
 import pl.edu.agh.iisg.to.model.Student;
 import pl.edu.agh.iisg.to.session.SessionService;
 
@@ -16,6 +17,7 @@ public class StudentDao extends GenericDao<Student> {
     public Optional<Student> create(final String firstName, final String lastName, final int indexNumber) {
         // TODO - implement
         return Optional.empty();
+
     }
 
     public List<Student> findAll() {
@@ -24,7 +26,10 @@ public class StudentDao extends GenericDao<Student> {
     }
 
     public Optional<Student> findByIndexNumber(final int indexNumber) {
-        // TODO - implement
-        return Optional.empty();
+        Session session = currentSession();
+        // TODO - implement, bez wyjątku tutaj optional załatwia całkiem
+        return session.createQuery("SELECT s FROM Student s WHERE s.indexNumber = :indexNumber", Student.class)
+                .setParameter("indexNumber", indexNumber)
+                .uniqueResultOptional();
     }
 }

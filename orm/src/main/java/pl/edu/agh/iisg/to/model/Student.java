@@ -13,23 +13,33 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+@Entity
+@Table(name = Student.TABLE_NAME)
 public class Student {
 
     public static final String TABLE_NAME = "student";
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    @Column(name = "ID")
     private int id;
 
+    @Column(name = "FIRST_NAME", nullable = false, length = 50)
     private String firstName;
 
+    @Column(name = "LAST_NAME", nullable = false, length = 50)
     private String lastName;
 
+    @Column(name = Columns.INDEX_NUMBER, unique = true, nullable = false)
     private int indexNumber;
 
+    @OneToMany(mappedBy = "student")
     private Set<Grade> gradeSet = new HashSet<>();
 
+    @ManyToMany(mappedBy = "studentSet")
     private Set<Course> courseSet = new HashSet<>();
 
-    Student() {
+    protected Student() {
     }
 
     public Student(final String firstName, final String lastName, final int indexNumber) {
