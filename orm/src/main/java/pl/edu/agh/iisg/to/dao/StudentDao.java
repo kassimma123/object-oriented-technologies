@@ -4,7 +4,6 @@ import org.hibernate.Session;
 import pl.edu.agh.iisg.to.model.Student;
 import pl.edu.agh.iisg.to.session.SessionService;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,14 +14,18 @@ public class StudentDao extends GenericDao<Student> {
     }
 
     public Optional<Student> create(final String firstName, final String lastName, final int indexNumber) {
-        // TODO - implement
-        return Optional.empty();
+        // TODO - implement - done
+        Student student = new Student(firstName, lastName, indexNumber);
+        return save(student);
 
     }
 
     public List<Student> findAll() {
-        // TODO - implement
-        return Collections.emptyList();
+        // TODO - implement - done
+        Session session = currentSession();
+        return session.createQuery("SELECT s FROM Student s ORDER BY s.lastName, s.firstName", Student.class)
+                .getResultList();
+
     }
 
     public Optional<Student> findByIndexNumber(final int indexNumber) {
