@@ -1,7 +1,5 @@
 package pl.edu.agh.iisg.to.repository;
 
-import pl.edu.agh.iisg.to.model.Student;
-
 import java.util.List;
 import java.util.Optional;
 
