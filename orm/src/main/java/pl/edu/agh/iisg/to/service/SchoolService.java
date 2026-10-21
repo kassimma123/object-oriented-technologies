@@ -6,6 +6,7 @@ import pl.edu.agh.iisg.to.dao.StudentDao;
 import pl.edu.agh.iisg.to.model.Course;
 import pl.edu.agh.iisg.to.model.Grade;
 import pl.edu.agh.iisg.to.model.Student;
+import pl.edu.agh.iisg.to.repository.StudentRepository;
 import pl.edu.agh.iisg.to.session.TransactionService;
 
 import java.util.*;
@@ -14,14 +15,17 @@ public class SchoolService {
 
     private final TransactionService transactionService;
 
+    private final StudentRepository studentRepository;
+
     private final StudentDao studentDao;
 
     private final CourseDao courseDao;
 
     private final GradeDao gradeDao;
 
-    public SchoolService(TransactionService transactionService, StudentDao studentDao, CourseDao courseDao, GradeDao gradeDao) {
+    public SchoolService(TransactionService transactionService, StudentRepository studentRepository, StudentDao studentDao, CourseDao courseDao, GradeDao gradeDao) {
         this.transactionService = transactionService;
+        this.studentRepository = studentRepository;
         this.studentDao = studentDao;
         this.courseDao = courseDao;
         this.gradeDao = gradeDao;
@@ -49,7 +53,7 @@ public class SchoolService {
             Student student = studentOpt.get();
             student.courseSet().forEach(c -> c.studentSet().remove(student));
             student.courseSet().clear();
-            studentDao.remove(student);
+            studentRepository.remove(student);
             return true;
         }).orElse(false);
 
