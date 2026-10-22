@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CrawlerApp {
 
-    public static final String SERPER_API_KEY = "*** Enter your https://serper.dev API key HERE ***";
+    public static final String SERPER_API_KEY = "60cc580c34f242bdc9366806a79b83c3c7bfff59";
 
     private static final List<String> TOPICS = List.of("Agent Cooper", "Sherlock", "Poirot", "Detective Monk");
 

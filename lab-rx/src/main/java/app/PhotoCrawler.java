@@ -31,18 +31,19 @@ public class PhotoCrawler {
     }
 
     public void downloadPhotoExamples() {
-        try {
-            List<Photo> downloadedExamples = photoDownloader.getPhotoExamples();
-            for (Photo photo : downloadedExamples) {
-                photoSerializer.savePhoto(photo);
-            }
-        } catch (IOException e) {
-            log.log(Level.SEVERE, "Downloading photo examples error", e);
-        }
+        photoDownloader.getPhotoExamples()
+                .subscribe(
+                        photoSerializer::savePhoto, // za każdym razem gdy pojawi się zdjęcie, zapisz je
+                        e -> log.log(Level.SEVERE, "Downloading photo examples error", e)
+                );
     }
 
-    public void downloadPhotosForQuery(String query) throws IOException {
-        // TODO Implement me :(
+    public void downloadPhotosForQuery(String query) {
+        photoDownloader.searchForPhotos(query)
+                .subscribe(
+                        photoSerializer::savePhoto,
+                        e -> log.log(Level.SEVERE, "Downloading photos for query error", e)
+                );
     }
 
     public void downloadPhotosForMultipleQueries(List<String> queries) {
