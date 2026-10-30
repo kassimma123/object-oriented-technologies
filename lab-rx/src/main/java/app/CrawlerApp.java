@@ -5,16 +5,17 @@ import java.util.List;
 
 public class CrawlerApp {
 
-    public static final String SERPER_API_KEY = "60cc580c34f242bdc9366806a79b83c3c7bfff59";
+    public static final String SERPER_API_KEY = "6028a6b400aa709e56eb57c6d6147bf7e298160a";
 
     private static final List<String> TOPICS = List.of("Agent Cooper", "Sherlock", "Poirot", "Detective Monk");
 
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         PhotoCrawler photoCrawler = new PhotoCrawler();
         photoCrawler.resetLibrary();
-        photoCrawler.downloadPhotoExamples();
-//        photoCrawler.downloadPhotosForQuery(TOPICS.get(0));
-//        photoCrawler.downloadPhotosForMultipleQueries(TOPICS);
+        //photoCrawler.downloadPhotoExamples();
+        //photoCrawler.downloadPhotosForQuery(TOPICS.get(0));
+        photoCrawler.downloadPhotosForMultipleQueries(TOPICS);
+        Thread.sleep(20_000);
     }
 }

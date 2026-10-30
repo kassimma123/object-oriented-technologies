@@ -1,5 +1,6 @@
 package app;
 
+import io.reactivex.rxjava3.core.Observable;
 import model.Photo;
 import util.PhotoDownloader;
 import util.PhotoProcessor;
@@ -47,6 +48,10 @@ public class PhotoCrawler {
     }
 
     public void downloadPhotosForMultipleQueries(List<String> queries) {
-        // TODO Implement me :(
+        photoDownloader.searchForPhotos(queries)
+                .subscribe(
+                        photoSerializer::savePhoto,
+                        e -> log.log(Level.SEVERE, "Downloading photos from multiple queries error", e)
+                );
     }
 }

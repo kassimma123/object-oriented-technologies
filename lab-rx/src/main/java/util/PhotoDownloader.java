@@ -34,9 +34,11 @@ public class PhotoDownloader {
     public Observable<Photo> searchForPhotos(String searchQuery) {
         return Observable.create(observer -> {
             try {
+                //wyszukiwanie w sieci
                 List<String> photoUrls = GoogleSearchDriver.searchForImages(searchQuery);
                 for (String photoUrl : photoUrls) {
                     try {
+                        //pobieranie zdjęcia
                         observer.onNext(getPhoto(photoUrl));
                     } catch (IOException e) {
                         log.log(Level.WARNING, "Could not download a photo", e);
@@ -44,6 +46,7 @@ public class PhotoDownloader {
                 }
                 observer.onComplete();
             } catch (IOException | InterruptedException e) {
+                //błąd wyszukiwania
                 observer.onError(e);
             }
         });
@@ -80,5 +83,10 @@ public class PhotoDownloader {
             buffer.flush();
             return buffer.toByteArray();
         }
+    }
+
+    public Observable<Photo> searchForPhotos(List<String> searchQueries) {
+        return Observable.fromIterable(searchQueries)
+                .flatMap(query -> searchForPhotos(query).subscribeOn(Schedulers.io()));
     }
 }
