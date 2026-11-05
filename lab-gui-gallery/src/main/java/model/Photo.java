@@ -12,24 +12,27 @@ import javafx.scene.image.Image;
 
 public class Photo {
 
-    private String name;
-
-    private final Image photoData;
+    private final StringProperty name;
+    private final ObjectProperty<Image> photoData;
 
     public Photo(String extension, byte[] photoData) {
-        this.photoData = new Image(new ByteArrayInputStream(photoData));
-        this.name = UUID.randomUUID().toString() + "." + extension;
+        this.photoData = new SimpleObjectProperty<>(new Image(new ByteArrayInputStream(photoData)));
+        this.name = new SimpleStringProperty(UUID.randomUUID().toString() + "." + extension);
     }
 
     public String getName() {
-        return name;
+        return name.get();
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String nameValue) {
+        this.name.set(nameValue);
     }
 
     public Image getPhotoData() {
-        return photoData;
+        return photoData.get();
     }
+
+    public StringProperty nameProperty() {return name;}
+
+    public ObjectProperty<Image> photoDataProperty() {return photoData;}
 }

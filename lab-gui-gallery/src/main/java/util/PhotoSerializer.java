@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.logging.Logger;
+import javafx.collections.ListChangeListener;
 
 import javax.imageio.ImageIO;
 
@@ -31,6 +32,20 @@ public class PhotoSerializer {
 
     public void registerGallery(Gallery gallery) {
         // TODO model <-> serializer bindings configuration
+        gallery.getPhotos().addListener((ListChangeListener<? super Photo>) change -> {
+            while (change.next()){
+                if (change.wasAdded()){
+                    change.getAddedSubList().forEach(photo -> {
+                            savePhoto(photo);
+                            photo.nameProperty().addListener((observable, oldValue, newValue) -> {
+                                renamePhoto(oldValue, newValue);
+                            });
+                    });
+                } else if (change.wasRemoved()){
+                    change.getRemoved().forEach(photo -> removePhoto(photo));
+                }
+            }
+        });
     }
 
     private void createLibraryDirectory() throws IOException {
