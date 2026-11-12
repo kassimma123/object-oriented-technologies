@@ -7,7 +7,6 @@ import pl.edu.agh.school.Teacher;
 import java.util.List;
 
 public interface PersistenceManager {
-    Logger log = Logger.getInstance();
 
     void saveTeachers(List<Teacher> teachers);
 
